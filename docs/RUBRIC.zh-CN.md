@@ -2,6 +2,19 @@
 
 每个标的按 10 个维度打分，每项 0-5 分，总分 0-50 分。
 
+总分用于快速排序，但不能单独决定仓位类型。框架同时输出三个辅助分数：
+
+| 辅助分数 | 构成 | 用途 |
+|---|---|---|
+| Quality Score / 30 | 大周期强度、瓶颈强度、验证程度、财务转化、扩产 / 技术路径、风险可控性 | 判断它是不是真瓶颈、能否转成利润 |
+| Mispricing Score / 15 | 估值错配、市场未发现程度、催化剂密度 | 判断是否存在未定价 alpha |
+| Capital Score / 5 | 资本结构 | 单独检查稀释、债务和融资 overhang |
+
+这样可以区分两类常见情况：
+
+- 高质量但已被充分发现的 core compounder。
+- 错配明显但执行和融资风险更高的 high beta bottleneck。
+
 ## 1. 大周期强度
 
 | 分数 | 标准 |
@@ -120,3 +133,12 @@
 | 32-39 | Worth tracking / small-to-medium position candidate |
 | 25-31 | Watchlist / small satellite only |
 | <25 | Avoid or research-only |
+
+## 仓位类型解释
+
+| 类型 | 标准 |
+|---|---|
+| Core compounder | Quality Score 高、资本结构健康、风险可控。可以是热门股，不要求市场未发现。 |
+| High beta bottleneck | Quality Score 合格，Mispricing Score 较高，但执行、融资或波动风险更高。 |
+| Watchlist / moonshot | 有大周期或局部瓶颈，但验证、财务转化或风险控制仍不足。 |
+| Avoid or research-only | 总分、质量分或资本结构不足，不适合进入候选池。 |

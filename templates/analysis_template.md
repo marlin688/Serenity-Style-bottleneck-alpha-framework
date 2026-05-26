@@ -64,3 +64,11 @@
 | 风险可控性 |  |
 
 总分：
+
+Quality Score / 30：
+
+Mispricing Score / 15：
+
+Capital Score / 5：
+
+Position Type：

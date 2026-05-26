@@ -49,6 +49,10 @@ Bottleneck Alpha Score
 Ticker: RGTI
 Total: 31.0 / 50
 Category: Watchlist / small satellite only
+Position Type: Watchlist / moonshot
+Quality Score: 20.0 / 30
+Mispricing Score: 7.5 / 15
+Capital Score: 3.5 / 5
 ```
 
 ---
@@ -118,7 +122,11 @@ Compute / GPUs → Memory / HBM / NAND / DRAM → Interconnect / Networking → 
 
 ## 评分体系
 
-每个标的按 10 个维度打分，每项 0-5 分，总分 0-50 分：
+每个标的按 10 个维度打分，每项 0-5 分，总分 0-50 分。同时输出三个辅助分数，避免把“真瓶颈质量”和“未定价 alpha”混成一个数字：
+
+- Quality Score / 30：大周期、瓶颈、验证、财务转化、扩产路径、风险可控性。
+- Mispricing Score / 15：估值错配、市场未发现程度、催化剂密度。
+- Capital Score / 5：资本结构与稀释风险。
 
 | 维度 | 问题 |
 |---|---|
@@ -132,6 +140,27 @@ Compute / GPUs → Memory / HBM / NAND / DRAM → Interconnect / Networking → 
 | 资本结构 | 是否没有巨额 ATM / dilution overhang？ |
 | 催化剂密度 | 是否有 GTC、OFC、earnings、CHIPS、customer ramp 等催化？ |
 | 风险可控性 | 执行、竞争、宏观、监管、客户集中是否可接受？ |
+
+CLI 还会推断 Position Type：
+
+| 类型 | 含义 |
+|---|---|
+| Core compounder | 瓶颈质量高、财务转化强、资本结构健康，但未必便宜或冷门。 |
+| High beta bottleneck | 有明显错配和催化剂，但执行、融资或波动风险更高。 |
+| Watchlist / moonshot | 方向值得跟踪，但验证、财务转化或风险控制还不足。 |
+| Avoid or research-only | 质量、资本结构或总分不足，只适合研究观察。 |
+
+### 关于真实公司案例
+
+README 只保留稳定的框架规则和示例输出格式，不直接维护真实上市公司的实时评分。NVDA、NBIS 这类真实标的的分数会随财报、估值、订单、融资和资本结构变化而过期。
+
+如果需要保存真实公司分析，请放在 `docs/CASE_STUDY_*.zh-CN.md` 或 `examples/` 下，并明确标注：
+
+- 分析日期；
+- 使用的数据来源；
+- Total / Quality / Mispricing / Capital 分数；
+- Position Type；
+- 不构成投资建议。
 
 ---
 

@@ -19,12 +19,13 @@ Ticker：<TICKER>
 11. 仓位类型
 12. 需要继续追踪的指标
 13. Bull / Base / Bear case
-14. 最终评分，0-50 分
+14. 最终评分：Total / 50、Quality / 30、Mispricing / 15、Capital / 5
 
 请重点避免：
 
 - 把热门概念当成瓶颈；
 - 忽略稀释；
+- 只用总分判断仓位类型；
 - 用当前收入否定所有未来 ramp；
 - 用未来故事掩盖没有财务转化；
 - 把 integrator 误判为 core IP owner；

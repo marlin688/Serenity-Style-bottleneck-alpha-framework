@@ -30,7 +30,10 @@ def cmd_score(args: argparse.Namespace) -> int:
     if not isinstance(scores, dict):
         raise SystemExit("YAML must include a 'scores' object")
 
-    result = score(ticker=ticker, scores=scores)
+    try:
+        result = score(ticker=ticker, scores=scores)
+    except (TypeError, ValueError) as exc:
+        raise SystemExit(f"Invalid scores: {exc}") from exc
     print(format_result(result))
     return 0
 

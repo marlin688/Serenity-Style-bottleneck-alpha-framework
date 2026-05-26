@@ -11,7 +11,7 @@
 5. 判断市场是否还没定价：是否非美上市、机构覆盖少、市值小、当前财务被 legacy drag 掩盖、处于 qualification 阶段、主流报告遗漏？
 6. 用合适模型估值：capacity × ASP、price hike × margin、peer valuation gap、sum-of-parts、forward P/E、backlog conversion。
 7. 严格检查资本结构：ATM、convertibles、loans、warrants、SBC、authorized shares、lockup、float dynamics。巨额 ATM 或授权稀释是重大红旗。
-8. 区分它是 core compounder、high beta bottleneck、moonshot、hedge，还是 watchlist only。
+8. 分开判断 bottleneck quality、mispricing alpha、capital structure，不要只用总分做结论。
 9. 给出 bull case、base case、bear case、关键催化剂、需要追踪的数据和退出条件。
 10. 不要把供应链重要性直接等同于股票回报。只有当瓶颈能转化为 revenue、gross margin、operating income 和估值重估时，才是高质量机会。
 
@@ -29,4 +29,4 @@
 - 稀释 / 资本结构检查
 - 仓位类型
 - 需要继续追踪的指标
-- 最终评分，0-50 分
+- 最终评分：Total / 50、Quality / 30、Mispricing / 15、Capital / 5
