@@ -1,0 +1,33 @@
+watchlist:
+  - ticker: LITE
+    theme: Photonics / EML / OCS
+    type: Core compounder
+    key_tracking:
+      - backlog / sold-out status
+      - Google TPU capex
+      - EML capacity expansion
+      - gross margin
+  - ticker: SIVE
+    theme: CPO / CW DFB lasers
+    type: Moonshot / high-beta bottleneck
+    key_tracking:
+      - Win Semi qualification
+      - Jabil 1.6T ramp
+      - Ayar / POET / CPO volume orders
+      - dilution
+  - ticker: HPS.A
+    theme: Transformers / power infrastructure
+    type: Power bottleneck compounder
+    key_tracking:
+      - backlog
+      - price hikes
+      - Mexico capacity ramp
+      - copper / electrical steel cost
+  - ticker: RGTI
+    theme: Quantum / national security
+    type: Watchlist / moonshot
+    key_tracking:
+      - government funding terms
+      - fidelity milestones
+      - system orders
+      - cash burn

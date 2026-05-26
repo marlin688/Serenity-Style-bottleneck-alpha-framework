@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bottleneck-alpha"
+version = "0.1.0"
+description = "A research framework and CLI for scoring structural bottleneck opportunities."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+  {name = "Bottleneck Alpha Framework Contributors"}
+]
+dependencies = [
+  "PyYAML>=6.0"
+]
+
+[project.scripts]
+bottleneck-alpha = "bottleneck_alpha.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

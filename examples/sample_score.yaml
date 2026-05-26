@@ -1,0 +1,16 @@
+ticker: RGTI
+company: Rigetti Computing
+scores:
+  cycle_strength: 5.0
+  bottleneck_strength: 3.0
+  validation: 4.0
+  financial_conversion: 2.0
+  valuation_gap: 2.0
+  market_discovery: 1.0
+  scaling_path: 3.5
+  capital_structure: 3.5
+  catalyst_density: 4.5
+  risk_control: 2.5
+notes:
+  thesis: "High-beta national-security quantum moonshot, not a confirmed operating-income bottleneck."
+  category_hint: "Watchlist / small satellite only"
